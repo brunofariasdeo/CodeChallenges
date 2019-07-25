@@ -1,34 +1,31 @@
 # Challenge
-# Have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm. 
-# Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). 
-# Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string. 
+# Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. 
+# If there are two or more words that are the same length, return the first word from the string with that length. 
+# Ignore punctuation and assume sen will not be empty. 
 
-def LetterChanges(str): 
+def LongestWord(sen): 
 
+    wordsList= []
     wordString= ""
 
-    for letter in str:
-        if ord(letter) == 90 or ord(letter) == 122:
-            letter = "A"
-            wordString += letter
-        else:
-            if (ord(letter) >= 65 and ord(letter) <=90) or (ord(letter)>=97 and ord(letter)<=122):
+    for word in sen:
+        if ord(word) == 32:
+            wordsList.append(wordString)
+            wordString = ""
+        elif (ord(word) >= 65 and ord(word) <=91) or (ord(word)>=97 and ord(word)<=122):
+	        wordString += word
 
-                letter = chr(ord(letter)+1)
+    wordsList.append(wordString)
 
-                if ord(letter) == 97 or ord(letter) == 101 or ord(letter) == 105 or ord(letter) == 111 or ord(letter) == 117:
-                    letter = chr(ord(letter)-32)
-                    wordString += letter
-                    
-                else:
-                    wordString += letter
-            
-            else:
-                wordString += letter
+    biggerWord = ""
+    for word in wordsList:
+        if len(word) > len(biggerWord):
+            biggerWord = word
 
-    return wordString
+    sen = biggerWord
+
+    return sen
     
-
-# stringInput = "hello*3"
-stringInput = "a confusing /:sentence:/[ this is not!!!!!!!~"
-print (LetterChanges(stringInput))  
+# keep this function call here  
+a = "dale! meu. pirraia?!.;;-="
+print(LongestWord(a))
