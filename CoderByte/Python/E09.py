@@ -8,6 +8,7 @@ def TimeConvert(num):
     minutes = num % 60
 
     timeConverted = str(hours) + ":" + str(minutes)
+    #return ':'.join([str(hours), str(minutes)]) - Join could also be a good idea here
     # code goes here 
     return timeConverted
     
