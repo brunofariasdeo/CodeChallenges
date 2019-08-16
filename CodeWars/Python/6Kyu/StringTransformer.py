@@ -12,6 +12,7 @@
 # You may assume the input only contain English alphabet and spaces.
 
 def string_transformer(s):
+    s = s + " "
     newString = ""
     stringList = []
     for letter in s:
@@ -26,6 +27,6 @@ def string_transformer(s):
  
     stringList.append(newString)
     
-    return ' '.join(list(reversed(stringList)))[:-1]
+    return ''.join(list(reversed(stringList)))[:-1]
 
 print(string_transformer("You Know When  THAT  Hotline Bling"))
