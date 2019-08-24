@@ -22,5 +22,14 @@
 # You cannot swap the operands. For instance, in the given example you cannot get expression (1 + 3) * 2 = 8.
 
 def expression_matter(a, b, c):
-    operators = [+, *]
-    return # highest achievable result
+    results = []
+    results.append(a*b+c)
+    results.append(a*c+b)
+    results.append(a+b+c)
+    results.append(a*b*c)
+    results.append((a+b)*c)
+    results.append(a*(b+c))
+
+    return max(results)
+
+print(expression_matter(1,3,1))
