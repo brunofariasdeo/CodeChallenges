@@ -1,13 +1,16 @@
-# Link: https://www.codewars.com/kata/powers-of-3/train/python
+import math   
 
 def largestPower(N):
-    largest = 0
 
-    for number in range (0,N):
-        if 3**(number) < N:
-            largest = number
+    if N>=1.67 and N<= 3:
+        return 0
+    elif N>0 and N<1.67:
+        return - 1
+    else:
+        logResult = int((math.log(N,2))/(math.log(3,2)))
 
-    return largest
+        
+        return int((math.log(N,2))/(math.log(3,2)))
 
-print(largestPower(1000))
-    
+
+print(largestPower(80))
