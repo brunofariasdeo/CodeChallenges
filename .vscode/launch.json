@@ -5,12 +5,39 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - ATM",
+            "request": "launch",
+            "mainClass": "ATM",
+            "projectName": "CodeChallenges_365ec8c5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CountSheep",
+            "request": "launch",
+            "mainClass": "CountSheep",
+            "projectName": "CodeChallenges_365ec8c5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SquareSum",
+            "request": "launch",
+            "mainClass": "SquareSum",
+            "projectName": "CodeChallenges_365ec8c5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CountTheMonkeys",
+            "request": "launch",
+            "mainClass": "CountTheMonkeys",
+            "projectName": "CodeChallenges_365ec8c5"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
-        },
-
+        }
     ]
 }
